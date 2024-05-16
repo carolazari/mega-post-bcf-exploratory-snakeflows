@@ -45,4 +45,4 @@ pip3 install .
 ## pca with pcangsd
 srun --pty /bin/bash
 conda activate pcangsd
-pcangsd -b results/bcf_testy/filt_snps05/all/thin_100_1/beagle-gl/beagle-gl.gz -o trout_mix1_WGS_NCState --threads 12
+pcangsd -b results/bcf_testy/filt_snps05/all/thin_100_1/beagle-gl/beagle-gl.gz  -maf 0.05  --maf_save --sites_save --selection -o trout_mix1_WGS_NCState --threads 12
