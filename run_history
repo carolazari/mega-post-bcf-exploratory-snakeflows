@@ -1,0 +1,48 @@
+### post-bcf pipeline run on NCState ccgp trout
+### run ngsadmix on the bcf -> not that important right now, just want to see the PCA right now
+
+## download the mega-post-bcf-exploratory-workflow from git hub
+git clone git@github.com:hmoyle/mega-post-bcf-exploratory-snakeflows.git
+## made my own fork so I can work in different branches and keep my config files
+
+## softlink genome.fast.fai to resources/
+ln -s /home/hmoyle/projects/trout/resources/genome.fasta.fai resources/
+
+## make the scaffold_groups_tsv
+## run cheyenne's script from resources
+## pull chromosome sizes from gen bank?
+make_scaf_group.py [insert (arlee-trout-genome_chr_sizes.txt 32) here]
+
+## softlink bcf into resources/
+ln -s /home/hmoyle/projects/trout/mega-non-model-wgs-snakeflow/results/bqsr-round-0/bcf/pass-maf-0.01.bcf resources/
+ln -s /home/hmoyle/projects/trout/mega-non-model-wgs-snakeflow/results/bqsr-round-0/bcf/pass-maf-0.01.bcf.csi resources/
+
+## create sample list in sample_subsets/
+module load bio/bcftools
+bcftools query -l pass-maf-0.01.bcf > ../sample_subsets/sample_list.txt
+
+## edit config file to remove excess targets. change paths, change thinning to 100_1 (from 0_0), and make rule four_for_ten
+
+## activate snakemake environment
+snakemake7.32
+
+## dry run
+snakemake --profile hpcc-profiles/slurm/sedna --configfile config.yaml -np
+
+## full run
+snakemake --profile hpcc-profiles/slurm/sedna --configfile config.yaml -p
+
+## build pcangsd in conda environment
+git clone https://github.com/Rosemeis/pcangsd.git
+mv pcangsd/ bin/
+cd bin/pcangsd/
+conda env create -f environment.yml
+pip3 install --user -r requirements.txt
+conda activate pcangsd
+pip3 install .
+
+
+## pca with pcangsd
+srun --pty /bin/bash
+conda activate pcangsd
+pcangsd -b results/bcf_testy/filt_snps05/all/thin_100_1/beagle-gl/beagle-gl.gz -o trout_mix1_WGS_NCState --threads 12
