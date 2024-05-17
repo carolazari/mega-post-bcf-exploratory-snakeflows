@@ -1,13 +1,39 @@
-fai_path: resources/genome.fasta.fai
-scaff_group_path: resources/scaffold_groups.tsv
+fai_path: example-configs/Otsh_v1.0-nz-arg-etc/Otsh_v1.0_genomic.fna.fai
+scaff_group_path: example-configs/Otsh_v1.0-nz-arg-etc/scaffs_chrom_only_with28.tsv
 
 
 bcf:
-  testy:
-    path: "resources/pass-maf-0.01.bcf"
+ # testy:
+  #  path: "resources/pass-maf-0.01.bcf"
+   # sample_subsets:
+    #  all:
+     #   path: sample_subsets/sample_list.txt
+
+  cali_only:
+    path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/ca_only.vcf.gz"
     sample_subsets:
       all:
-        path: sample_subsets/sample_list.txt
+        path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/ca_only.txt"
+  ca_arg_only:
+    path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/ca_arg_only.vcf.gz"
+    sample_subsets:
+      all:
+        path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/ca_arg_samples_list.txt"
+      arg_only: 
+        path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/arg_only.txt"
+    
+  ca_nz_only:
+    path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/ca_nz_only.vcf.gz"
+    sample_subsets:
+      all:
+        path: "example-configs/Otsh_v1.0-nz-arg-etc/sample_lists/ca_nz_samples_list.txt"
+        nz_only: 
+        path: "example-configs/Otsh_v1.0-nz-arg-etc/resources/nz_only.txt"
+      #cv_and_south:
+     #   path: "example-configs/Otsh_v1.0-nz-arg-etc/sample_lists/cv-and-south-hemi.txt"
+      #  dotsample: "example-configs/Otsh_v1.0-nz-arg-etc/dot-samples/cv-and-south-hemi.tsv"
+       # ybin: "example-configs/Otsh_v1.0-nz-arg-etc/ybins/cv-and-south-hemi.txt"
+
 
 
 
@@ -27,8 +53,18 @@ evalAdmix:
 
 
 main_params:
-  standard:
-    bcf: testy
+    cali:
+    bcf: cali_only
+    filt: snps05
+    thin_spec: "0_0"
+    maf: 0.05
+  ca_arg:
+    bcf: ca_arg_only
+    filt: snps05
+    thin_spec: "0_0"
+    maf: 0.05
+  ca_nz:
+    bcf: ca_nz_only
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
@@ -48,7 +84,11 @@ params:
 
 targets:
   ngsadmix:
-    - ["standard", "all", "four_for_ten"]
+    - ["cali", "all", "four_for_ten"]
+    - ["ca_arg", "all", "no_frills"]
+    - ["ca_nz", "all", "no_frills"]
   evaladmix:
-    - ["standard", "all", "four_for_ten"]
+    - ["cali", "all", "four_for_ten"]
+    - ["ca_arg", "all", "no_frills"]
+    - ["ca_nz", "all", "no_frills"]
 
