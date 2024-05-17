@@ -2,24 +2,13 @@
 ## be run on which sample subset from which parent BCF
 
 
-#### MODULES SECTION
-
-# This is what you would use on Alpine
-#Rmodule: "R/4.2.2"
-
-# This is what you would use on SEDNA
-Rmodule: "R/4.0.3"
-
-
-
-
 #### DEFINITIONS SECTIONS #####
 
 # every BCF file used here must correspond to the same
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
-fai_path: .test/resources/genome.fasta.fai
-scaff_group_path: .test/resources/scaffold_groups.tsv
+fai_path: example-configs/arg-nz-ca-chinook/resources/Otsh_v1.0_genomic.fna.fai
+scaff_group_path: example-configs/arg-nz-ca-chinook/resources/scaffold_groups.tsv
 
 
 
@@ -30,17 +19,17 @@ scaff_group_path: .test/resources/scaffold_groups.tsv
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   testy:
-    path: ".test/resources/100_fish.bcf"
+    path: "example-configs/arg-nz-ca-chinook/resources/all.bcf"
     sample_subsets:
       all:
-        path: .test/sample_subsets/all-fish.txt     #  all 100 fish
-        dotsample: .test/data/dot-samples-all.tsv
-      males:
-        path: .test/sample_subsets/males.txt    # just the males
-        dotsample: .test/data/dot-samples-males.tsv
-      females:
-        path: .test/sample_subsets/females.txt  # just the females
-        dotsample: .test/data/dot-samples-females.tsv 
+        path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list.txt     #  all 100 fish
+        dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples.tsv
+     # males:
+       # path: .test/sample_subsets/males.txt    # just the males
+       # dotsample: .test/data/dot-samples-males.tsv
+      #females:
+       # path: .test/sample_subsets/females.txt  # just the females
+       # dotsample: .test/data/dot-samples-females.tsv 
 
 
 # same thing here, we can define different sets of bcftools filters
@@ -74,15 +63,15 @@ main_params:
     thin_spec: "0_0"
     maf: 0.05
 
-
+    
 # Here we provide different sets of parameters for particular
 # analyses.
 params:
-  do_asso:
-    age_cohort_4PCs:
-      angsd_opts: " -doMaf 4 -doAsso 4 "
-      whichPhe: " age "
-      whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
+ # do_asso:
+  #  age_cohort_4PCs:
+   #   angsd_opts: " -doMaf 4 -doAsso 4 "
+    #  whichPhe: " age "
+     # whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
   ngsadmix:
       four_for_five:
         reps: 4
@@ -104,11 +93,11 @@ params:
 # or possibly multiple filenames.
 
 targets:
-  do_asso:
-    - ["standard", "all", "age_cohort_4PCs"]
-    - ["standard", "males", "age_cohort_4PCs"]
-    - ["standard", "females", "age_cohort_4PCs"]
-  beagle_gl: # this is here in case you just want to 
-    - ["standard", "males", "dummy"]
+  #do_asso:
+   # - ["standard", "all", "age_cohort_4PCs"]
+    #- ["standard", "males", "age_cohort_4PCs"]
+    #- ["standard", "females", "age_cohort_4PCs"]
+  #beagle_gl: # this is here in case you just want to 
+   # - ["standard", "males", "dummy"]
   ngsadmix:
     - ["standard", "all", "four_for_five"]
