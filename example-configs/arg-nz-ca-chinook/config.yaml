@@ -20,7 +20,7 @@ Rmodule: "R/4.0.3"
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
 fai_path: example-configs/arg-nz-ca-chinook/resources/Otsh_v1.0_genomic.fna.fai
-scaff_group_path: example-configs/arg-nz-ca-chinook/resources/scaffold_groups.tsv
+scaff_group_path: example-configs/arg-nz-ca-chinook/resources/scaff_groups_chroms_only.tsv
 
 
 
