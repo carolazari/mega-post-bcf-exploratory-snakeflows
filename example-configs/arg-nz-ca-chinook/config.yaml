@@ -78,7 +78,7 @@ main_params:
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
-
+ 
     
 # Here we provide different sets of parameters for particular
 # analyses.
@@ -116,4 +116,6 @@ targets:
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
   ngsadmix:
-    - ["standard", "all", "ca_arg","ca_nz", "four_for_five"]
+    - ["standard", "all", "four_for_five"]
+    - ["standard", "ca_arg", "four_for_five"]
+    - ["standard","ca_nz", "four_for_five"]
