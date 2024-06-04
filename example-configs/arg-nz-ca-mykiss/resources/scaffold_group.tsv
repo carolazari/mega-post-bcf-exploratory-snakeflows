@@ -1,4 +1,4 @@
-id	chrom	start	end
+id	chrom	start	stop
 scaff_group001	NW_023493657.1	1	4173621
 scaff_group001	NW_023493658.1	1	2864942
 scaff_group001	NW_023493659.1	1	2745910
