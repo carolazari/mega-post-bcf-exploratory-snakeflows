@@ -31,15 +31,15 @@ scaff_group_path: /home/clazari/Projects/Omykiss/mega-non-model-wgs-snakeflow/ex
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-chinook/resources/all.bcf"
+    path: "example-configs/arg-nz-ca-mykiss/resources/all.bcf"
     sample_subsets:
       all:
-        path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list.txt     #  all 100 fish
-        dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples.tsv
+        path: example-configs/arg-nz-ca-mykiss/resources/samples_list.txt     #  all 100 fish
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
       ca_arg:
-        path: example-configs/arg-nz-ca-chinook/sample_subsets/ca_arg_samples_list.txt #just argentina vs ca
+        path: example-configs/arg-nz-ca-mykiss/resources/ca_arg_samples.txt #just argentina vs ca
       ca_nz:
-        path: example-configs/arg-nz-ca-chinook/sample_subsets/ca_nz_samples_list.txt  #just nz vs ca   
+        path: example-configs/arg-nz-ca-mykiss/resources/ca_nz_samples.txt  #just nz vs ca   
      # males:
        # path: .test/sample_subsets/males.txt    # just the males
        # dotsample: .test/data/dot-samples-males.tsv
