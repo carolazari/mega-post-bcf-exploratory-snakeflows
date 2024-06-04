@@ -1,4 +1,4 @@
-id	chrom	start	end	angsd_chrom	mh_label
+id	chrom	start	stop	angsd_chrom	mh_label
 scaff_grp_0001	NC_048565.1	1	4788618	NC_048565.1	1
 scaff_grp_0002	NC_048566.1	1	4943185	NC_048566.1	2
 scaff_grp_0003	NC_048567.1	1	4739502	NC_048567.1	3
