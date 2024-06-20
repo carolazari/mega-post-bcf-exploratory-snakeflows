@@ -30,7 +30,7 @@ rule run_ngsadmix:
 		multiext("results/bcf_{bcf_id}/filt_{bcfilt}/{sampsub}/thin_{thin_int}_{thin_start}/ngsadmix/maf_{min_maf}/K_{K}_rep_{rep}/output", ".filter", ".fopt.gz", ".log", ".qopt")
 	threads: 4
 	resources:
-		mem_mb=19200
+		mem_mb=20000
 	log:
 		"results/logs/run_ngsadmix/bcf_{bcf_id}/filt_{bcfilt}/{sampsub}/thin_{thin_int}_{thin_start}/maf_{min_maf}/K_{K}_rep_{rep}/log.txt"
 	shell:
