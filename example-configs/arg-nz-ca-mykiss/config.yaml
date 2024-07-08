@@ -118,4 +118,4 @@ targets:
   ngsadmix:
 #    - ["standard", "all", "four_for_five"]
 #     - ["standard", "ca_arg", "ten_for_ten"]
-    - ["standard","ca_nz", "ten_for_ten"]
+     - ["standard","ca_nz", "ten_for_ten"]
