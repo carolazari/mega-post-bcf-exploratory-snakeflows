@@ -30,7 +30,7 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
 # bcf file, so they go here.  If there are meta data files for association
 # studies in ANGSD, these go here as the dotsample.
 bcf:
-  main4:
+  main_arg_only:
     path: "example-configs/arg-nz-ca-mykiss/resources/all.bcf"
     sample_subsets:
 #      all:
@@ -38,8 +38,10 @@ bcf:
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
 #      ca_arg:
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
-      ca_nz:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
+#      ca_nz:
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
+      arg_only: 
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
      # males:
        # path: .test/sample_subsets/males.txt    # just the males
        # dotsample: .test/data/dot-samples-males.tsv
@@ -74,7 +76,7 @@ ngsAdmix:
 # these are all the standard parameters in the file paths
 main_params:
   standard:
-    bcf: main4
+    bcf: main_arg_only
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
@@ -118,4 +120,5 @@ targets:
   ngsadmix:
 #    - ["standard", "all", "four_for_five"]
 #     - ["standard", "ca_arg", "ten_for_ten"]
-     - ["standard","ca_nz", "ten_for_ten"]
+#     - ["standard","ca_nz", "ten_for_ten"]
+     - ["standard","arg_only", "ten_for_ten"]
