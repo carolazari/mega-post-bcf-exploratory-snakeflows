@@ -30,7 +30,7 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
 # bcf file, so they go here.  If there are meta data files for association
 # studies in ANGSD, these go here as the dotsample.
 bcf:
-  main_arg_only:
+  main_nz_ca:
     path: "example-configs/arg-nz-ca-mykiss/resources/all.bcf"
     sample_subsets:
 #      all:
@@ -38,10 +38,10 @@ bcf:
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
 #      ca_arg:
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
-#      ca_nz:
-#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
-      arg_only: 
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
+      ca_nz:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
+#      arg_only: 
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
      # males:
        # path: .test/sample_subsets/males.txt    # just the males
        # dotsample: .test/data/dot-samples-males.tsv
