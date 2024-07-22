@@ -76,7 +76,7 @@ ngsAdmix:
 # these are all the standard parameters in the file paths
 main_params:
   standard:
-    bcf: main_arg_only
+    bcf: main_nz_ca
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
@@ -120,5 +120,5 @@ targets:
   ngsadmix:
 #    - ["standard", "all", "four_for_five"]
 #     - ["standard", "ca_arg", "ten_for_ten"]
-#     - ["standard","ca_nz", "ten_for_ten"]
-     - ["standard","arg_only", "ten_for_ten"]
+     - ["standard","ca_nz", "ten_for_ten"]
+#     - ["standard","arg_only", "ten_for_ten"]
