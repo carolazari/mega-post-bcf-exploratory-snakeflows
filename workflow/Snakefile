@@ -22,5 +22,6 @@ include: "rules/angsd.smk"
 include: "rules/beagle_regions.smk"
 include: "rules/NGSadmix.smk"
 include: "rules/evalAdmix.smk"
+include: "rules/pcangsd.smk"
 
 
