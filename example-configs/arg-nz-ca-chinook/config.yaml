@@ -19,9 +19,8 @@ Rmodule: "R/4.0.3"
 # every BCF file used here must correspond to the same
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
-fai_path: example-configs/arg-nz-ca-chinook/resources/Otsh_v1.0_genomic.fna.fai
-scaff_group_path: example-configs/arg-nz-ca-chinook/resources/scaff_groups_chroms_only.tsv
-
+fai_path: example-configs/arg-nz-ca-chinook/data/genome.fasta.fai
+scaff_group_path: example-configs/arg-nz-ca-chinook/data/scaffold_group_chroms_only.tsv
 
 
 # this is the short name and the path to the BCF file that will be used
