@@ -33,8 +33,8 @@ bcf:
     path: "example-configs/arg-nz-ca-chinook/data/all.bcf"
     sample_subsets:
       all:
-        path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list_CAxArg.txt     #  all  fish
-       dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples-CAxArg.tsv
+       path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list_CAxArg.txt     #  all  fish
+        dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples-CAxArg.tsv
     #  ca_arg:
       # path: example-configs/arg-nz-ca-chinook/sample_subsets/ca_arg_samples_list.txt #just argentina vs ca
     #  ca_nz:
