@@ -35,7 +35,7 @@ bcf:
     sample_subsets:
       all:
        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt     #  all 100 fish
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
+       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
 #      ca_arg:
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
 #      ca_nz:
