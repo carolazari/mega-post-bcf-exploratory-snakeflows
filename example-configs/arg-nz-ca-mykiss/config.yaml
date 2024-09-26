@@ -20,7 +20,7 @@ Rmodule: "R/4.0.3"
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
 fai_path: /home/clazari/Projects/Omykiss/mega-non-model-wgs-snakeflow/resources/genome.fasta.fai
-scaff_group_path: /example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
+scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
 
 
 
