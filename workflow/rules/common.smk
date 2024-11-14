@@ -140,37 +140,3 @@ def expand_targets():
 			reps=list(range(1,R+1))
 			ret = ret + expand(mainp + "/K_{K}_rep_{rep}/output.corres.txt", K=kvals, rep=reps)
 	return ret
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
