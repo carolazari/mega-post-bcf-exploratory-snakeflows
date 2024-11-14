@@ -1,5 +1,5 @@
 rule install_evaladmix:
-  params:
+params:
     hash=config["evalAdmix"]["version"], 
     url=config["evalAdmix"]["url"]
   output:
@@ -54,3 +54,4 @@ rule postprocess_evaladmix:
         "(awk -f workflow/scripts/corres_header.awk {input.samp_list} > {output.header} && "
         " paste {input.samp_list} {input.corres} > {output.body}  && "
         " cat {output.header} {output.body} > {output.corres}) 2> {log} "
+    
