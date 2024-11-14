@@ -1,3 +1,4 @@
+
 # these ruleorders are needed to make sure that when you ask for thin_0_0,
 # Snakemake will run the bcftools_subsamp_and_filt versions rather than the
 # bcftools_thin versions
@@ -6,10 +7,12 @@ ruleorder:  bcf_samps_and_filt_gather > bcf_thin_gather
 
 include: "rules/common.smk"
 
-#localrules: write_bcf_regions
+localrules: postprocess_ngsadmix #write_bcf_regions
+localrules: postprocess_evaladmix 
+
 rule all:
-	input:
-		targs=expand_targets()
+    input:
+        targs=expand_targets()
 
 
 include: "rules/ref.smk"
@@ -20,5 +23,4 @@ include: "rules/pcangsd.smk"
 include: "rules/angsd.smk"
 include: "rules/beagle_regions.smk"
 include: "rules/NGSadmix.smk"
-include: "rules/pcangsd.smk"
 include: "rules/evalAdmix.smk"
