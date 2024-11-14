@@ -66,7 +66,9 @@ pcangsd:
 ngsAdmix:
   url: https://github.com/aalbrechtsen/NGSadmix.git
   version: a5cde0502ac1e1cfce994bc9fd72ef1813c262b6
-
+evalAdmix:
+  url: https://github.com/hmoyle/evalAdmix.git
+  version: 4b8423f48ba43508038952038224d7b1a97374c2
 
 
 
