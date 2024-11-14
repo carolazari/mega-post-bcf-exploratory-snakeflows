@@ -1,4 +1,3 @@
-
 # these ruleorders are needed to make sure that when you ask for thin_0_0,
 # Snakemake will run the bcftools_subsamp_and_filt versions rather than the
 # bcftools_thin versions
