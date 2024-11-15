@@ -99,9 +99,9 @@ params:
         kvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   evaladmix:
-      four_for_five:
-        reps: 4
-        kvals: [1, 2, 3, 4, 5]      
+      ten_for_ten:
+        reps: 10
+        kvals: [1, 2, 3, 4, 5,, 6, 7, 8, 9, 10]      
 
 
 
@@ -131,4 +131,4 @@ targets:
 #     - ["standard","ca_nz", "ten_for_ten"]
 #     - ["standard","arg_only", "ten_for_ten"]
   evaladmix:
-      - ["standard", "all", "four_for_five"]
+      - ["standard", "ca_arg", "ten_for_ten"]
