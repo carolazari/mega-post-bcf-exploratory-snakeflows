@@ -66,9 +66,9 @@ pcangsd:
 ngsAdmix:
   url: https://github.com/aalbrechtsen/NGSadmix.git
   version: a5cde0502ac1e1cfce994bc9fd72ef1813c262b6
-evalAdmix:
-  url: https://github.com/GenisGE/evalAdmix.git
-  version: 4b8423f48ba43508038952038224d7b1a97374c2
+#evalAdmix:
+#  url: https://github.com/GenisGE/evalAdmix.git
+#  version: 4b8423f48ba43508038952038224d7b1a97374c2
 
 
 
@@ -94,14 +94,14 @@ params:
     #  whichPhe: " age "
      # whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
   ngsadmix:
-      ten_for_ten:
-        reps: 10
-        kvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      eight_for_six:
+        reps: 6
+        kvals: [1, 2, 3, 4, 5, 6]
 
-  evaladmix:
-      ten_for_ten:
-        reps: 10
-        kvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]      
+  #evaladmix:
+  #    ten_for_ten:
+  #      reps: 10
+  #      kvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]      
 
 
 
@@ -127,8 +127,8 @@ targets:
    # - ["standard", "males", "dummy"]
   ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
-     - ["standard", "ca_arg", "ten_for_ten"]
+     - ["standard", "ca_arg", "eight_for_six"]
 #     - ["standard","ca_nz", "ten_for_ten"]
 #     - ["standard","arg_only", "ten_for_ten"]
-  evaladmix:
-      - ["standard", "ca_arg", "ten_for_ten"]
+#  evaladmix:
+#      - ["standard", "ca_arg", "ten_for_ten"]
