@@ -88,9 +88,9 @@ params:
     #  whichPhe: " age "
      # whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
   ngsadmix:
-      ten_for_ten:
-        reps: 10
-        kvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      eight_for_eight:
+        reps: 8
+        kvals: [1, 2, 3, 4, 5, 6,8]
 
 
 
@@ -115,6 +115,6 @@ targets:
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
   ngsadmix:
-    - ["standard", "all", "ten_for_ten"]
+    - ["standard", "all", "eight_for_eight"]
   #  - ["standard", "ca_arg", "four_for_five"]
   #  - ["standard","ca_nz", "four_for_five"]
