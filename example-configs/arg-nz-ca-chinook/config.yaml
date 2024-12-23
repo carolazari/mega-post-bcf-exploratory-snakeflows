@@ -30,7 +30,7 @@ scaff_group_path: example-configs/arg-nz-ca-chinook/data/scaffold_group_chroms_o
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-chinook/data/chinook/all_CAxNZ.bcf"
+    path: "example-configs/arg-nz-ca-chinook/data/all_CAxNZ.bcf"
     sample_subsets:
       ca_nz:
        path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list_CAxNZ.txt     #  all  fish
