@@ -30,11 +30,11 @@ scaff_group_path: example-configs/arg-nz-ca-chinook/data/scaffold_group_chroms_o
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-chinook/data/all.bcf"
+    path: "example-configs/arg-nz-ca-chinook/data/chinook/all_CAxNZ.bcf"
     sample_subsets:
-      all:
-       path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list_CAxArg.txt     #  all  fish
-       dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples-CAxArg.tsv
+      ca_nz:
+       path: example-configs/arg-nz-ca-chinook/sample_subsets/samples_list_CAxNZ.txt     #  all  fish
+       dotsample: example-configs/arg-nz-ca-chinook/data/dot-samples-CAxNZ.tsv
     #  ca_arg:
       # path: example-configs/arg-nz-ca-chinook/sample_subsets/ca_arg_samples_list.txt #just argentina vs ca
     #  ca_nz:
@@ -115,6 +115,6 @@ targets:
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
   ngsadmix:
-    - ["standard", "all", "eight_for_eight"]
+  #  - ["standard", "all", "eight_for_eight"]
   #  - ["standard", "ca_arg", "four_for_five"]
-  #  - ["standard","ca_nz", "four_for_five"]
+    - ["standard","ca_nz", "eight_for_eight"]
