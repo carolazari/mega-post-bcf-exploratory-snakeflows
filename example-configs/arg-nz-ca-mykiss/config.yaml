@@ -34,7 +34,6 @@ bcf:
     path: "example-configs/arg-nz-ca-mykiss/resources/CAxArg/all.bcf"
     sample_subsets:
 #      all:
-#
 #       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
       ca_arg:
