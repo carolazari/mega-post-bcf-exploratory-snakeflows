@@ -38,6 +38,7 @@ bcf:
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
       ca_arg:
         path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
 #      ca_nz:
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
 #      arg_only: 
@@ -87,11 +88,11 @@ main_params:
 # Here we provide different sets of parameters for particular
 # analyses.
 params:
- # do_asso:
-  #  age_cohort_4PCs:
-   #   angsd_opts: " -doMaf 4 -doAsso 4 "
-    #  whichPhe: " age "
-     # whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
+  do_asso:
+    native_south_4PCs:
+      angsd_opts: " -doMaf 4 -doAsso 4 "
+      whichPhe: " hemi "
+      whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
   ngsadmix:
       eight_for_six:
         reps: 6
