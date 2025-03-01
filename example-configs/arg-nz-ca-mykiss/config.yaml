@@ -31,7 +31,7 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_groups_no0
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-mykiss/resources/CAxArg/all.bcf"
+    path: "example-configs/arg-nz-ca-mykiss/resources/CAxNZ/all.bcf"
     sample_subsets:
 #      all:
 #       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt     #  all 100 fish
