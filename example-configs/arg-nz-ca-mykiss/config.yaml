@@ -36,11 +36,12 @@ bcf:
 #      all:
 #       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-      ca_arg:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-#      ca_nz:
-#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca   
+#      ca_arg:
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
+#        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
+      ca_nz:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
      # males:
@@ -127,8 +128,8 @@ targets:
    # - ["standard", "males", "dummy"]
   ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
-     - ["standard", "ca_arg", "eight_for_six"]
-#     - ["standard","ca_nz", "ten_for_ten"]
+#     - ["standard", "ca_arg", "eight_for_six"]
+     - ["standard","ca_nz", "eight_for_six"]
 #     - ["standard","arg_only", "ten_for_ten"]
 #  evaladmix:
 #      - ["standard", "ca_arg", "ten_for_ten"]
