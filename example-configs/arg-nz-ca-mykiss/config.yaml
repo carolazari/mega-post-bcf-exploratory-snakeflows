@@ -41,7 +41,7 @@ bcf:
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
       ca_nz:
         path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
+#        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
      # males:
