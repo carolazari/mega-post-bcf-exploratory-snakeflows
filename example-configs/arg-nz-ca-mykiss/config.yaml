@@ -129,7 +129,7 @@ targets:
   ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
 #     - ["standard", "ca_arg", "eight_for_six"]
-     - ["standard","ca_nz", "eight_for_six"]
+     - ["standard", "ca_nz", "eight_for_six"]
 #     - ["standard","arg_only", "ten_for_ten"]
 #  evaladmix:
 #      - ["standard", "ca_arg", "ten_for_ten"]
