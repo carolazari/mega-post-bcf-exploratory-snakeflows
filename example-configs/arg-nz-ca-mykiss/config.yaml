@@ -20,7 +20,7 @@ Rmodule: "R/4.0.3"
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
 fai_path: /home/clazari/Projects/Omykiss/mega-non-model-wgs-snakeflow/resources/genome.fasta.fai
-scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_groups_no05.tsv
+scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_groups.tsv
 
 
 
@@ -31,16 +31,17 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_groups_no0
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-mykiss/resources/CAxNZ/all.bcf"
+    path: "example-configs/arg-nz-ca-mykiss/resources/CAxArg/bcf_March_2025/all.bcf"
+    
     sample_subsets:
 #      all:
 #       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-#      ca_arg:
-#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
+      ca_arg:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-      ca_nz:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
+#      ca_nz:
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
