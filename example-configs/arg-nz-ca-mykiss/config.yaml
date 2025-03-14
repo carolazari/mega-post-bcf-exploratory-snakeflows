@@ -85,13 +85,18 @@ main_params:
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
+  ca_arg:
+    bcf: ca_arg
+    filt: snps05
+    thin_spec: "0_0"
+    maf: 0.05
  
     
 # Here we provide different sets of parameters for particular
 # analyses.
 params:
   do_asso:
-    native_south_4PCs:
+    age_cohort_4PCs:
       angsd_opts: " -doMaf 4 -doAsso 4 "
       whichPhe: " hemi "
       whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
@@ -121,15 +126,15 @@ params:
 # or possibly multiple filenames.
 
 targets:
-  #do_asso:
-   #- ["standard", "ca_arg", "native_south_4PCs"]
+  do_asso:
+   - ["standard", "ca_arg", "native_south_4PCs"]
     #- ["standard", "males", "age_cohort_4PCs"]
     #- ["standard", "females", "age_cohort_4PCs"]
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
   ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
-     - ["standard", "ca_arg", "eight_for_six"]
+   - ["standard", "ca_arg", "eight_for_six"]
 #     - ["standard", "ca_nz", "eight_for_six"]
 #     - ["standard","arg_only", "ten_for_ten"]
 #  evaladmix:
