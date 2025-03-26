@@ -31,17 +31,17 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-mykiss/resources/CAxArg/bcf_March_2025/all.bcf"
+    path: "example-configs/arg-nz-ca-mykiss/resources/CAxNZ/all.bcf"
     
     sample_subsets:
 #      all:
 #       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-      ca_arg:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-#      ca_nz:
-#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
+#      ca_arg:
+      #  path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
+      #  dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
+      ca_nz:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
 #        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
@@ -86,7 +86,7 @@ main_params:
     thin_spec: "0_0"
     maf: 0.05
   ca_arg:
-    bcf: ca_arg
+    bcf: ca_nz
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
@@ -101,7 +101,7 @@ params:
       whichPhe: " hemi "
       whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
   ngsadmix:
-      eight_for_six:
+      six_for_six:
         reps: 6
         kvals: [1, 2, 3, 4, 5, 6]
 
@@ -134,8 +134,8 @@ targets:
    # - ["standard", "males", "dummy"]
   ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
-   - ["standard", "ca_arg", "eight_for_six"]
-#     - ["standard", "ca_nz", "eight_for_six"]
+#   - ["standard", "ca_arg", "eight_for_six"]
+     - ["standard", "ca_nz", "six_for_six"]
 #     - ["standard","arg_only", "ten_for_ten"]
 #  evaladmix:
 #      - ["standard", "ca_arg", "ten_for_ten"]
