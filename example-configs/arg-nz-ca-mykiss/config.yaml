@@ -31,23 +31,23 @@ scaff_group_path: example-configs/arg-nz-ca-mykiss/resources/scaffold_group.tsv
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "example-configs/arg-nz-ca-mykiss/resources/CAxArg/bcf_March_2025/all.bcf"
+    path: "/share/swfsc/clazari/Omykiss/results_mega-non-model_CAxArg_March_2025/bqsr-round-0/all.bcf"
     
     sample_subsets:
-      arg_only:
-       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list_Arg_only.txt     #  all 100 fish
+#      arg_only:
+#       path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list_Arg_only.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-#      ca_arg:
-      #  path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
-      #  dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-      #ca_nz:
-      #  path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
-#        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
+      ca_arg:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
+      ca_nz:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
-     # males:
-       # path: .test/sample_subsets/males.txt    # just the males
-       # dotsample: .test/data/dot-samples-males.tsv
+      everyone:
+        path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt    # everyone
+        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
       #females:
        # path: .test/sample_subsets/females.txt  # just the females
        # dotsample: .test/data/dot-samples-females.tsv 
@@ -85,11 +85,21 @@ main_params:
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
-  arg_only:
-    bcf: arg_only
+  ca_arg:
+    bcf: ca_arg
     filt: snps05
     thin_spec: "0_0"
     maf: 0.05
+  ca_nz:
+    bcf: ca_nz
+    filt: snps05
+    thin_spec: "0_0"
+    maf: 0.05
+  everyone:
+    bcf: everyone
+    filt: snps05
+    thin_spec: "0_0"
+    maf: 0.05 
  
     
 # Here we provide different sets of parameters for particular
@@ -100,10 +110,10 @@ params:
       angsd_opts: " -doMaf 4 -doAsso 4 "
       whichPhe: " hemi "
       whichCov: " cohort,PC-1,PC-2,PC-3,PC-4 "
-  ngsadmix:
-      six_for_six:
-        reps: 6
-        kvals: [1, 2, 3, 4, 5, 6]
+#  ngsadmix:
+#      six_for_six:
+#        reps: 6
+#        kvals: [1, 2, 3, 4, 5, 6]
 
   #evaladmix:
   #    ten_for_ten:
@@ -126,16 +136,16 @@ params:
 # or possibly multiple filenames.
 
 targets:
-  #do_asso:
-  # - ["standard", "ca_arg", "native_south_4PCs"]
-    #- ["standard", "males", "age_cohort_4PCs"]
-    #- ["standard", "females", "age_cohort_4PCs"]
+  do_asso:
+    - ["standard", "ca_arg", "age_cohort_4PCs"]
+    - ["standard", "everyone", "age_cohort_4PCs"]
+    - ["standard", "ca_nz", "age_cohort_4PCs"]
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
-  ngsadmix:
+#  ngsadmix:
 #    - ["standard", "all", "ten_for_ten"]
 #   - ["standard", "ca_arg", "eight_for_six"]
-     - ["standard", "arg_only", "six_for_six"]
+#     - ["standard", "arg_only", "six_for_six"]
 #     - ["standard","arg_only", "ten_for_ten"]
 #  evaladmix:
 #      - ["standard", "ca_arg", "ten_for_ten"]
