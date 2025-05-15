@@ -9,7 +9,7 @@ rule angsd_do_asso_single:
 	params:
 		sg="{scaff_grp}",
 		whichCov="cohort,PC1,PC2,PC3,PC4",
-		whichPhe=" age ",
+		whichPhe=" hemi ",
 		doMaf=" -doMaf 4 ",
 		what=" -doAsso 4 "
 	log:
