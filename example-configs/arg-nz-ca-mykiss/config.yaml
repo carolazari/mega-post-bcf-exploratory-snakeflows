@@ -40,14 +40,14 @@ bcf:
       ca_arg:
         path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_arg_samples.txt #just argentina vs ca
         dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
-      ca_nz:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
+#      ca_nz:
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/ca_nz_samples.txt  #just nz vs ca  
+#        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_nz.tsv 
 #      arg_only: 
 #        path: example-configs/arg-nz-ca-mykiss/sample_subsets/arg_only.txt
-      everyone:
-        path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt    # everyone
-        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
+#      everyone:
+#        path: example-configs/arg-nz-ca-mykiss/sample_subsets/samples_list.txt    # everyone
+#        dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-all.tsv
       #females:
        # path: .test/sample_subsets/females.txt  # just the females
        # dotsample: .test/data/dot-samples-females.tsv 
@@ -91,15 +91,15 @@ main_params:
     thin_spec: "0_0"
     maf: 0.05
   ca_nz:
-    bcf: ca_nz
-    filt: snps05
-    thin_spec: "0_0"
-    maf: 0.05
-  everyone:
-    bcf: everyone
-    filt: snps05
-    thin_spec: "0_0"
-    maf: 0.05 
+#    bcf: ca_nz
+#    filt: snps05
+#    thin_spec: "0_0"
+#    maf: 0.05
+#  everyone:
+#    bcf: everyone
+#    filt: snps05
+#    thin_spec: "0_0"
+#    maf: 0.05 
  
     
 # Here we provide different sets of parameters for particular
@@ -138,8 +138,8 @@ params:
 targets:
   do_asso:
     - ["standard", "ca_arg", "age_cohort_4PCs"]
-    - ["standard", "everyone", "age_cohort_4PCs"]
-    - ["standard", "ca_nz", "age_cohort_4PCs"]
+#    - ["standard", "everyone", "age_cohort_4PCs"]
+#    - ["standard", "ca_nz", "age_cohort_4PCs"]
   #beagle_gl: # this is here in case you just want to 
    # - ["standard", "males", "dummy"]
 #  ngsadmix:
