@@ -20,7 +20,7 @@ Rmodule: "R/4.0.3"
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
 fai_path: /home/clazari/Projects/Chinook/mega-non-model-wgs-snakeflow/resources/genome.fasta.fai
-scaff_group_path: example-configs/arg-nz-ca-chinook/data/scaffold_group_chroms_only.tsv
+scaff_group_path: example-configs/arg-nz-ca-chinook/data/scaffold_groups_v2.tsv
 
 
 # this is the short name and the path to the BCF file that will be used
