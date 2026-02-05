@@ -82,7 +82,7 @@ main_params:
     
 # Here we provide different sets of parameters for particular
 # analyses.
-#params:
+params:
 #  do_asso:
 #    age_cohort_4PCs:
 #      angsd_opts: " -doMaf 4 -doAsso 4 "
