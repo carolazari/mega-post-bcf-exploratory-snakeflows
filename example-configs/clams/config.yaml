@@ -20,7 +20,7 @@ Rmodule: "R/4.0.3"
 # reference genome and thus to the same scaffold groups file.
 # These are identified here:
 fai_path: /home/clazari/Projects/Clams/mega-non-model-wgs-snakeflow/resources/genome.fasta.fai
-scaff_group_path: example-configs/clams/resources/scaffold_group.tsv
+scaff_group_path: example-configs/clams/resources/scaffold_groups.tsv
 
 
 
@@ -35,7 +35,7 @@ bcf:
     
     sample_subsets:
       clams:
-       path: example-configs/clams/sample_subsets/samples_list_Arg_only.txt     #  all 100 fish
+       path: example-configs/clams/sample_subsets/sample_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
       
 
