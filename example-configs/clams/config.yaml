@@ -35,7 +35,7 @@ bcf:
     
     sample_subsets:
       clams:
-       path: example-configs/clams/sample_subsets/sample_list.txt     #  all 100 fish
+       path: example-configs/clams/sample_subsets/samples_list.txt     #  all 100 fish
 #       dotsample: example-configs/arg-nz-ca-mykiss/resources/dot-samples-ca_arg.tsv
       
 
