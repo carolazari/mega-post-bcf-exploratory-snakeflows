@@ -31,7 +31,7 @@ scaff_group_path: example-configs/clams/resources/scaffold_group.tsv
 # studies in ANGSD, these go here as the dotsample.
 bcf:
   main:
-    path: "results/bqsr-round-0/bcf/all.bcf"
+    path: "/home/clazari/Projects/Clams/mega-non-model-wgs-snakeflow/results/bqsr-round-0/bcf/all.bcf"
     
     sample_subsets:
       clams:
